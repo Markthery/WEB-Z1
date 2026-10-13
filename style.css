@@ -1,0 +1,294 @@
+/* --- Mobile First CSS --- */
+
+/* Переменные (Системный подход к дизайну) */
+:root {
+    --bg-color: #0a0a0a;
+    --text-main: #f5f5f5;
+    --text-muted: #888888;
+    --accent-color: #d4ff00; /* Неоновый желто-зеленый */
+    --card-bg: #161616;
+    --border-color: #2a2a2a;
+    --font-main: 'Space Grotesk', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+/* Плавающие чипы (адаптация макета) */
+.floating-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.chip {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Секция Hero (Шапка) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 20px rgba(212, 255, 0, 0.2);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #000;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    word-break: break-all;
+}
+
+.btn:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Секции */
+section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+}
+
+/* Сетка About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.about-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.about-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.about-card p, .about-card ul {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.about-card ul {
+    list-style-position: inside;
+    margin-top: 0.5rem;
+}
+
+.about-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.accent-card {
+    border-color: var(--accent-color);
+    background: linear-gradient(145deg, #161616 0%, #1a1a1a 100%);
+}
+
+.accent-card h3 {
+    color: var(--accent-color);
+}
+
+/* Сетка Портфолио */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Анимация появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Планшет и Десктоп (Адаптивность) --- */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .floating-chips {
+        justify-content: flex-end;
+        position: sticky;
+        top: 20px;
+        z-index: 10;
+    }
+
+    .hero {
+        align-items: flex-start;
+        text-align: left;
+        flex-direction: row;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-card.full-width {
+        grid-column: span 2;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .about-card.full-width {
+        grid-column: span 3;
+    }
+}

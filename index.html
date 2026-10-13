@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крылова Ксения | 3D Художник & Game Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Декоративные плавающие элементы -->
+    <div class="floating-chips">
+        <span class="chip">3D MODELING</span>
+        <span class="chip">GAME DEV</span>
+        <span class="chip">SPbSUPTD</span>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <img src="profile.jpg" alt="Крылова Ксения" class="profile-img">
+            <h1>Крылова Ксения</h1>
+            <p class="subtitle">3D Художник & Разработчик игр</p>
+            <a href="mailto:hrsenia2004@gmail.com" class="btn">Связаться: hrhsenia2004@gmail.com</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Секция О себе и Инструменты -->
+        <section class="about fade-in" id="about">
+            <div class="section-header">
+                <h2>ОБО МНЕ</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Образование</h3>
+                    <p>Высшее, СПБГУПТД</p>
+                </div>
+                <div class="about-card">
+                    <h3>Навыки</h3>
+                    <p>3D моделирование, Гейм-дев</p>
+                </div>
+                <div class="about-card full-width">
+                    <h3>Инструменты и задачи</h3>
+                    <ul>
+                        <li><strong>Blender:</strong> Полигональное моделирование, UV-развертка, текстурирование, рендеринг сцен.</li>
+                        <li><strong>Unity / Unreal Engine:</strong> Интеграция 3D-ассетов, настройка материалов и освещения для игровых проектов.</li>
+                        <li><strong>Substance Painter:</strong> Создание PBR-текстур.</li>
+                    </ul>
+                </div>
+                <div class="about-card full-width accent-card">
+                    <h3>Существенный запрос и результат</h3>
+                    <p><strong>Запрос:</strong> "Оптимизация топологии для игровых движков"</p>
+                    <p><strong>Результат:</strong> Изучены методы ретопологии и оптимизации сетки. Применение этих техник позволило снизить полигонаж моделей на 40% без потери визуального качества, что критически важно для производительности игр.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Портфолио -->
+        <section class="portfolio fade-in" id="portfolio">
+            <div class="section-header">
+                <h2>ПРОЕКТЫ</h2>
+            </div>
+            <div class="grid">
+                <!-- Проект 1 -->
+                <div class="card">
+                    <img src="3d house.jpg" alt="3D House" loading="lazy">
+                    <div class="card-content">
+                        <h3>3D Дом</h3>
+                        <p>Архитектурная визуализация, моделирование в Blender</p>
+                    </div>
+                </div>
+                <!-- Проект 2 -->
+                <div class="card">
+                    <img src="3d house1.jpg" alt="3D House 1" loading="lazy">
+                    <div class="card-content">
+                        <h3>3D Дом - Итерация 2</h3>
+                        <p>Детализация окружения, текстурирование</p>
+                    </div>
+                </div>
+                <!-- Проект 3 -->
+                <div class="card">
+                    <img src="3d project.jpg" alt="3D Project" loading="lazy">
+                    <div class="card-content">
+                        <h3>3D Проект</h3>
+                        <p>Игровой ассет, оптимизация сетки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; <span id="year"></span> Крылова Ксения. Все права защищены.</p>
+        <div class="footer-info">
+            <p><strong>Создано с помощью:</strong> AI-ассистента (Gemini)</p>
+            <p><strong>Время выполнения:</strong> ~2 часа</p>
+            <p><strong>Реализованный JS:</strong> Автоматическое обновление года, анимация появления элементов при скролле (Intersection Observer).</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
